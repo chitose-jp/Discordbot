@@ -23,6 +23,7 @@ const commands=[
           {
             type:6,
             name:"target",
+            required:true,
             description:"ターゲットユーザーを選択"
           }
         ]
