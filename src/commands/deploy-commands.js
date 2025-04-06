@@ -7,8 +7,16 @@ const commands=[
     description:"動作確認用"
   },
   {
-    name:"servsrInfo",
-    description:"サーバーの情報を取得する"
+    name:"server",
+    description:"情報を取得する",
+    options:[{
+      type:"STRING",
+      name:"method",
+      required:true,
+      choices:[
+        {name:"info",value:"info"}
+      ]
+    }]
   }
 ];
 
