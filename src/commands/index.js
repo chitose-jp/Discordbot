@@ -5,6 +5,7 @@ async function handleCommand(interaction){
     await interaction.reply({content:"Pong!",ephemeral:true});
   }
   if(interaction.commandName==="info"){
+    console.log(interaction.getSubcommand());
     if(interaction.getSubcommand()==="server"){
       const servsr=interaction.guild;
       console.log(server);
