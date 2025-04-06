@@ -1,12 +1,7 @@
-version: 1
 services:
   - type: web
-    name: Discordbot
-    env: node
+    name: discordbot
+    runtime: node
     plan: free
-    buildCommand: npm install
-    startCommand: npm start
-    autoDeploy: true
-    envVars:
-      - key: NODE_VERSION
-        value: 20
+    buildCommand: "npm install"
+    startCommand: "npm run start"
