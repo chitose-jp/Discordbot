@@ -1,4 +1,5 @@
 const {REST,Routes}=require("discord.js");
+const {clientId}=require("../config.json");
 
 const commands=[
   {
@@ -10,10 +11,11 @@ const commands=[
 const rest=new REST({version:"10"}).setToken(process.env.BOT_TOKEN);
 
 async function deployCommands(){
-  for(const command of commands)
-    try{
-      await rest.put(Routes.applicationGuildCommands(clientId,guildId),{body:commands});
-       }catch(e){
-      console.error(e);
-       }
+  try{
+    await rest.put(Routes.applicationGuildCommands(clientId),{body:commands});
+  }catch(e){
+    console.error(e);
+  }
 }
+
+module.exports=deployCommands;
