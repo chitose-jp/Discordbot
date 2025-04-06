@@ -5,6 +5,10 @@ const commands=[
   {
     name:"ping",
     description:"動作確認用"
+  },
+  {
+    name:"servsrInfo",
+    description:"サーバーの情報を取得する"
   }
 ];
 
