@@ -5,7 +5,7 @@ async function handleCommand(interaction){
     await interaction.reply({content:"Pong!",ephemeral:true});
   }
   if(interaction.commandName==="info"){
-    if(interaction._subcommand==="server"){
+    if(interaction.getSubcommand()==="server"){
       const servsr=interaction.guild;
       console.log(server);
       await interaction.reply(`サーバー名:${server.name}\n
@@ -13,7 +13,7 @@ async function handleCommand(interaction){
       メンバー数:${server.memberCount}\n
       `);
     }
-    if(interaction._subcommand==="user"){
+    if(interaction.getSubcommand()==="user"){
       const user=interaction.options.getUser("target");
       await interaction.reply(`ユーザー名:${user.name}\n
       ユーザーID:${user.id}\n
