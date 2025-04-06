@@ -26,11 +26,6 @@ client.on(Events.MessageCreate,async m=>{
 
 client.on(Events.InteractionCreate,async interaction=>{
 	require("./commands")(interaction);
-  if(!interaction.isChatInputCommand())return;
-
-  if(interaction.commandName==="ping") {
-    await interaction.reply({content:"Pong!",ephemeral:true});
-  }
 });
 
 client.login(token);
