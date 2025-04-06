@@ -8,10 +8,16 @@ async function handleCommand(interaction){
     if(interaction._subcommand==="server"){
       const servsr=interaction.guild;
       console.log(server);
-      await interaction.reply({content:`サーバー名:${server.name}\n
+      await interaction.reply(`サーバー名:${server.name}\n
       サーバーID:${server.id}/n
       メンバー数:${server.memberCount}\n
-      `});
+      `);
+    }
+    if(interaction._subcommand==="user"){
+      const user=interaction.options.getUser("target");
+      await interaction.reply(`ユーザー名:${user.name}\n
+      ユーザーID:${user.id}\n
+      アバター:${user.avatarURL({format:"png"})}`);
     }
   }
 }
