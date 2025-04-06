@@ -1,4 +1,4 @@
-function handleCommand(interaction){
+async function handleCommand(interaction){
   console.log(interaction);
   if(!interaction.isChatInputCommand())return;
 
