@@ -1,4 +1,5 @@
 function handleCommand(interaction){
+  console.log(interaction);
   if(!interaction.isChatInputCommand())return;
 
   if(interaction.commandName==="ping") {
