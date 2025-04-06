@@ -12,7 +12,7 @@ const rest=new REST({version:"10"}).setToken(process.env.BOT_TOKEN);
 
 async function deployCommands(){
   try{
-    await rest.put(Routes.applicationGuildCommands(clientId,"McgZeGCp"),{body:commands});
+    await rest.put(Routes.applicationCommands(clientId),{body:commands});
   }catch(e){
     console.error(e);
   }
