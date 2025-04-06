@@ -1,6 +1,6 @@
 const {Client,Events,GatewayIntentBits}=require("discord.js");
 const checkBlackWords=require("./utils/filter");
-const token=process.env.TOKEN;
+const token=process.env.BOT_TOKEN;
 
 const client=new Client({intents:[
 	GatewayIntentBits.Guilds,
