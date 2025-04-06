@@ -1,4 +1,4 @@
-const bannedWords=JSON.parse(require("fs").readFileSync("../index.js"));
+const bannedWords=JSON.parse(require("fs").readFileSync("../config/bannedWords.json"));
 
 const reg=new RegExp(`(?:${bannedWords.join("|")})`);
 
