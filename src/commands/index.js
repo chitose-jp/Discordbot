@@ -11,7 +11,7 @@ async function handleCommand(interaction){
       await interaction.reply({content:`サーバー名:${server.name}\n
       サーバーID:${server.id}/n
       メンバー数:${server.memberCount}\n
-      `,ephemeral:false});
+      アイコン:${server.iconURL({format:"png"})}`,ephemeral:false});
     }
     if(interaction.options._subcommand==="user"){
       const user=interaction.options.getUser("target");
