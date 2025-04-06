@@ -13,12 +13,12 @@ client.once(Events.ClientReady,c=>{
 });
 
 client.on(Events.MessageCreate,async m=>{
+	if(checkBlackWords(content))return m.reply("禁止ワードが検出されました");
 	if(m.author.bot)return;
 	console.log(`受信しました${m}`);
 	if(!m.system&&!m.mentions.everyone&&m.mentions.users.has("1345636416566333533")){
 		let content =m.content.replace(/(?:<@[\d]+?> )*?/,"");
 		console.log(content);
-		if(checkBlackWords(content))returnm.reply("禁止ワードが検出されました");
 		m.reply(content);
 	}
 });
