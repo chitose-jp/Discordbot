@@ -7,8 +7,26 @@ const commands=[
     description:"動作確認用"
   },
   {
-    name:"server info",
-    description:"サーバーの情報を取得する",
+    name:"info",
+    description:"サーバーまたはユーザーの情報を取得する",
+    options:[
+      {
+        type:"SUB_COMMAND",
+        name:"server",
+        description:"サーバーの情報を取得する"
+      },
+      {
+        type:"SUB_COMMANDS",
+        name:"user",
+        options:[
+          {
+            type:"USER",
+            name:"target",
+            description:"ターゲットユーザーを選択"
+          }
+        ]
+      }
+    ]
   }
 ];
 
