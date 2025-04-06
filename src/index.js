@@ -8,7 +8,8 @@ const client=new Client({intents:[
 	GatewayIntentBits.GuildMessages
 ]});
 
-client.once(Events.ClientReady,c=>{
+client.once(Events.ClientReady,async c=>{
+	await require("./commands/deploy-commands")();
 	console.log(`準備OKです! ${c.user.tag}がログインします。`);
 });
 
