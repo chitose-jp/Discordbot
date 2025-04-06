@@ -6,7 +6,7 @@ async function handleCommand(interaction){
   }
   if(interaction.commandName==="info"){
     if(interaction.options._subcommand==="server"){
-      const servsr=interaction.guild;
+      const server=interaction.guild;
       console.log(server);
       await interaction.reply({content:`サーバー名:${server.name}\n
       サーバーID:${server.id}/n
