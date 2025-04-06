@@ -1,5 +1,4 @@
-const bannedWords=JSON.parse(require("fs").readFileSync("../config/bannedWords.json"));
-
+const bannedWords=["死ね","しね","テスト"];
 const reg=new RegExp(`(?:${bannedWords.join("|")})`);
 
 function checkBannedWords(str){
