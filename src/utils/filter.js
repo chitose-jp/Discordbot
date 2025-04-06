@@ -1,4 +1,4 @@
-const bannedWords=["死ね","しね","テスト"];
+const bannedWords=["死ね","しね"];
 const reg=new RegExp(`(?:${bannedWords.join("|")})`);
 
 function checkBannedWords(str){
