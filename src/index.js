@@ -13,7 +13,7 @@ client.once(Events.ClientReady,c=>{
 });
 
 client.on(Events.MessageCreate,async m=>{
-	if(checkBlackWords(content)){m.reply("禁止ワードが検出されました");return}
+	if(checkBlackWords(m.content)){m.reply("禁止ワードが検出されました");return}
 	if(m.author.bot)return;
 	console.log(`受信しました${m}`);
 	if(!m.system&&!m.mentions.everyone&&m.mentions.users.has("1345636416566333533")){
