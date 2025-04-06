@@ -11,16 +11,16 @@ const commands=[
     description:"サーバーまたはユーザーの情報を取得する",
     options:[
       {
-        type:"SUB_COMMAND",
+        type:1,
         name:"server",
         description:"サーバーの情報を取得する"
       },
       {
-        type:"SUB_COMMANDS",
+        type:1,
         name:"user",
         options:[
           {
-            type:"USER",
+            type:6,
             name:"target",
             description:"ターゲットユーザーを選択"
           }
