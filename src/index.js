@@ -24,7 +24,8 @@ client.on(Events.MessageCreate,async m=>{
 	}
 });
 
-client.on(Events.InteractionCreate, async interaction => {
+client.on(Events.InteractionCreate,async interaction=>{
+	require("./commands")(interaction);
   if(!interaction.isChatInputCommand())return;
 
   if(interaction.commandName==="ping") {
