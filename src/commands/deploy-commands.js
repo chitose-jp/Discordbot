@@ -18,6 +18,7 @@ const commands=[
       {
         type:1,
         name:"user",
+        description:"ユーザーの情報を取得する",
         options:[
           {
             type:6,
